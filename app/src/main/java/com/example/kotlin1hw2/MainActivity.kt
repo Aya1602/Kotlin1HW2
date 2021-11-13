@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.example.kotlin1hw2.databinding.ActivityMainBinding
+import com.example.kotlin1hw2.extension.load
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnRandomImg.setOnClickListener{
-            Glide.with(this).load(images.random()).into(binding.ivPhoto)
+            binding.ivPhoto.load(images.random())
         }
     }
 }
